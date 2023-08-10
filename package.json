@@ -9,6 +9,10 @@
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Cloudyttt/ohmyapp.git"
+  },
   "private": true,
   "keywords": [],
   "author": "",
