@@ -35,7 +35,6 @@ module.exports = {
         // 将 Stylus 文件编译为 CSS
         use: [
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          'style-loader',
           'css-loader',
           'postcss-loader',
           'stylus-loader'
@@ -61,8 +60,7 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js", ".json", ".vue"],
     alias: {
-      "@": path.resolve(__dirname, "../src"),
-      '~': path.join(__dirname, '../src'),
+      "~": path.resolve(__dirname, "../src"),
     },
   },
 };

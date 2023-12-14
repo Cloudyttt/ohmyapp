@@ -1,0 +1,12 @@
+* 
+  padding 0
+  margin 0
+  box-sizing border-box
+
+html
+  background #ebe0c2
+  
+html body
+  width 100vw !important
+  margin 0 auto
+  background #ebe0c2

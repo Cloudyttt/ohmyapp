@@ -1,14 +1,12 @@
 <template>
   <div id="oh-my-app">
     <h1 class="title">{{ name }}</h1>
-    {{ ActionsMsg.add }}
-    <img :src="ast" alt="" width="100">
+    <img :src="httpIcon" alt="" width="100">
   </div>
 </template>
 <script lang="ts" setup>
 import { ref } from "vue";
-import { ActionsMsg } from '@/const/index';
-import ast from '@/icon/SyntaxAnalysis.gif'
+import httpIcon from '~/assets/icons/http.png';
 
 const name = ref<string>('Oh my app!')
 
@@ -16,8 +14,12 @@ const name = ref<string>('Oh my app!')
 <style lang="stylus" scoped>
 #oh-my-app
   position relative
-  padding 0 20px
-  background: linear-gradient(220.55deg, #FF8570 0%, #418CB7 100%);
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  padding 20px
+  background linear-gradient(220.55deg, #FF8570 0%, #418CB7 100%);
   .title
     color white
 </style>
