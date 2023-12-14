@@ -6,11 +6,6 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index.ts",
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "../src"),
-    },
-  },
   module: {
     rules: [
       {
@@ -40,7 +35,6 @@ module.exports = {
         // 将 Stylus 文件编译为 CSS
         use: [
           devMode ? "style-loader" : MiniCssExtractPlugin.loader,
-          'style-loader',
           'css-loader',
           'postcss-loader',
           'stylus-loader'
@@ -62,4 +56,11 @@ module.exports = {
       template: "./template.html",
     }),
   ],
+  // 解析规则
+  resolve: {
+    extensions: [".ts", ".js", ".json", ".vue"],
+    alias: {
+      "~": path.resolve(__dirname, "../src"),
+    },
+  },
 };
