@@ -1,12 +1,14 @@
 <template>
   <div id="oh-my-app">
     <h1 class="title">{{ name }}</h1>
+    {{ ActionsMsg.add }}
     <img :src="ast" alt="" width="100">
   </div>
 </template>
 <script lang="ts" setup>
 import { ref } from "vue";
-import ast from '@/icon/ast.png'
+import { ActionsMsg } from './const/index';
+import ast from './icon/ast.png'
 
 const name = ref<string>('Oh my app!')
 

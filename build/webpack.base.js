@@ -6,11 +6,6 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index.ts",
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "../src"),
-    },
-  },
   module: {
     rules: [
       {
@@ -62,4 +57,11 @@ module.exports = {
       template: "./template.html",
     }),
   ],
+  // 解析规则
+  resolve: {
+    extensions: [".ts", ".js", ".json"],
+    alias: {
+      "@": path.resolve(__dirname, "../src"),
+    },
+  },
 };
