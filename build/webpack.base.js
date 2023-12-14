@@ -59,9 +59,10 @@ module.exports = {
   ],
   // 解析规则
   resolve: {
-    extensions: [".ts", ".js", ".json"],
+    extensions: [".ts", ".js", ".json", ".vue"],
     alias: {
       "@": path.resolve(__dirname, "../src"),
+      '~': path.join(__dirname, '../src'),
     },
   },
 };
