@@ -1,5 +1,5 @@
 <template>
-  <div id="oh-my-app">
+  <div class="page">
     <h1 class="title">{{ name }}</h1>
     <h5 class="title">{{ formatTimestamp(new Date().getTime()) }}</h5>
     <img class="shadow-box" :src="ast" alt="" width="100">
@@ -14,13 +14,14 @@ const name = ref<string>('About Page')
 
 </script>
 <style lang="stylus" scoped>
-#oh-my-app
+.page
   position relative
   display flex
   flex-direction column
-  justify-content center
+  justify-content flex-start
   align-items center
   padding 20px
+  // min-height 100vh
   background: linear-gradient(220.55deg, #FF8570 0%, #418CB7 100%);
   .title
     color white

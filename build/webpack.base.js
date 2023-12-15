@@ -53,6 +53,13 @@ module.exports = {
         ]
       },
       {
+        test: /\.css$/,
+        use: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          'css-loader'
+        ],
+      },
+      {
         test: /\.(png|svg|jpe?g|gif)$/,
         type: "asset",
         generator: {
