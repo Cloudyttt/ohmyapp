@@ -5,9 +5,12 @@ const baseConfig = require("./webpack.base.js");
 module.exports = merge(baseConfig, {
   mode: "development",
   target: "web",
+  devtool: 'source-map', // 此选项控制是否生成，以及如何生成 source map。
   devServer: {
     hot: true,
-    open: true,
+    port: 9000,
+    // open: true,
+    historyApiFallback: true,
     proxy: {
       "/api": {
         // 需要代理到的真实目标服务器，如/api/user会被代理到https://www.juejin.cn/api/user

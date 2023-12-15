@@ -6,6 +6,18 @@ const path = require("path");
 
 module.exports = {
   entry: "./src/index.ts",
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, '../dist'),
+    clean: true, // 在每次构建前清理 /dist 文件夹，这样只会生成用到的文件
+  },
+  // 解析规则
+  resolve: {
+    extensions: [".ts", ".js", ".json", ".vue"],
+    alias: {
+      "~": path.resolve(__dirname, "../src"),
+    },
+  },
   module: {
     rules: [
       {
@@ -56,11 +68,9 @@ module.exports = {
       template: "./template.html",
     }),
   ],
-  // 解析规则
-  resolve: {
-    extensions: [".ts", ".js", ".json", ".vue"],
-    alias: {
-      "~": path.resolve(__dirname, "../src"),
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
     },
   },
 };

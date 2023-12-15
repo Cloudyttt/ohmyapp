@@ -7,11 +7,13 @@ const routes = [
     path: "/",
     name: "Main",
     component: Main,
+    meta: {}
   },
   {
     path: "/about",
     name: "About",
     component: About,
+    meta: {}
   },
 ];
 
